@@ -41,7 +41,7 @@ pipeline {
                     
                         pwd
                         cat main2.py
-                        cat index2.py
+                        cat index2.html
                     
                     
                     '''
@@ -63,7 +63,7 @@ pipeline {
 
                         pwd
                         cat main3.py
-                        cat index3.py
+                        cat index3.html
                     '''
                 }
             }
