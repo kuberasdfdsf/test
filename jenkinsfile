@@ -1,0 +1,72 @@
+pipeline {
+
+
+    angent any
+    
+    stages {
+
+        stage('Build app1....'){
+
+            when {
+
+                changeset "**/app1/*.*"
+            }
+            
+            steps {
+
+                dir('app1') {
+                    sh '''
+                        
+                        pwd
+                        cat main1.py
+                        cat index1.html                        
+                        
+                        
+                        '''
+                }
+            }
+        }
+
+        stage('Build app2....') {
+
+            when {
+                changeset "**/app2/*.*"
+            }
+
+            steps {
+                
+                dir('app2') {
+
+                    sh '''
+                    
+                        pwd
+                        cat main2.py
+                        cat index2.py
+                    
+                    
+                    '''
+                }
+            }
+        }
+
+        stage('Build app3....') {
+
+            when {
+                changeset "**/app3/*.*"
+            }
+
+            steps {
+
+                dir('app3') {
+                    
+                    sh ''' 
+
+                        pwd
+                        cat main3.py
+                        cat index3.py
+                    '''
+                }
+            }
+        }
+    }
+}
